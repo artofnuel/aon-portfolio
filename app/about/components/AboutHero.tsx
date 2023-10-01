@@ -30,7 +30,7 @@ const AboutHero = () => {
             </span>
           </p>
           <p className="pt-10">
-            Let's check out my
+            Let&rsquo;s check out my
             <Link
               href="/projects"
               className="text-4xl font-bold text-primary mt-2 pl-2 uppercase underline underline-offset-8"
