@@ -7,11 +7,11 @@ import Link from "next/link";
 
 const Page = () => {
   return (
-    <div className="w-full h-[90vh] lg:h-[85vh] flex flex-col lg:flex-row gap-5 overflow-hidden p-4">
+    <div className="w-full h-[90vh] lg:h-[85vh] flex flex-col lg:flex-row gap-5 lg:gap-0 overflow-hidden p-4">
       <div className="w-full lg:w-1/2 h-full bg-bkg text-white relative">
         <div className="w-full h-full p-8 flex flex-col justify-center text-2xl">
           <h1 className="text-3xl">
-            Hi There, I'm
+            Hi There, I&apos;m
             <br />
             <span className="text-4xl font-bold text-primary italic uppercase">
               Emmanuel Inua
@@ -47,7 +47,7 @@ const Page = () => {
           width={1000}
           height={1000}
           alt="my image"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center lg:object-top"
         />
       </div>
     </div>

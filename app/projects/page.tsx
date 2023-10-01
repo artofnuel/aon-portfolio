@@ -6,7 +6,7 @@ import { BiUpArrow, BiDownArrow } from "react-icons/bi";
 import { PortableText } from "@portabletext/react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const page = async () => {
+const Page = async () => {
   const { currentIndex, reset, next, prev } = useCarouselStore();
   const projects = await getProjects();
   const totalSlides = projects.length;
@@ -151,4 +151,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;
