@@ -43,7 +43,7 @@ const Socials = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="w-full md:w-1/3 bg-[#1d1c1c] text-white rounded-sm p-8 md:p-4 flex flex-col md:flex-row justify-center items-center gap-5"
+        className="w-full md:w-1/3 bg-bkg text-white rounded-sm p-8 md:p-4 flex flex-col md:flex-row justify-center items-center gap-5"
       >
         <div className="flex gap-5">
           <motion.a

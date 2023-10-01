@@ -11,9 +11,6 @@ const Typed = () => {
           1000, // Waits 1s
           "user experiences", // Deletes 'One' and types 'Two'
           1000, // Waits 2s
-          () => {
-            console.log("Sequence completed");
-          },
         ]}
         wrapper="span"
         cursor={true}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import HeroImg from "./HeroImg";
 import Typed from "./Typed";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   const heroVariant = {
@@ -81,25 +82,67 @@ const Hero = () => {
           <HeroImg />
         </motion.div>
       </div>
-      <div className="h-auto md:h-[100px] flex flex-col md:flex-row justify-between gap-3">
-        <motion.div
-          variants={heroVariant}
-          initial="hidden2"
-          whileInView="slider"
-          viewport={{ once: true }}
-          className="w-full md:w-1/3 h-auto md:h-[100px] bg-bkg p-8 flex flex-col md:flex-row gap-5 justify-between items-center rounded-sm"
-        >
-          <h2 className="text-3xl font-light text-white">My Projects!</h2>
-          <motion.p variants={heroVariant} whileHover="hover">
-            <Link
-              className="p-2 bg-white text-primary rounded-md"
-              href="/projects"
-            >
-              See more
-            </Link>
-          </motion.p>
-        </motion.div>
-        <div className="hidden md:block md:w-1/3 invisible "></div>
+      <div className="w-full h-auto md:h-[100px] flex flex-col md:flex-row justify-between gap-5">
+        <div className="w-full md:w-2/3 flex flex-col md:flex-row gap-5">
+          <motion.div
+            variants={heroVariant}
+            initial="hidden2"
+            whileInView="slider"
+            viewport={{ once: true }}
+            className="w-full md:w-1/2 h-auto md:h-[100px] bg-bkg p-8 flex flex-col md:flex-row gap-5 justify-between items-center rounded-sm"
+          >
+            <h2 className="text-3xl font-light text-white">My Projects!</h2>
+            <motion.p variants={heroVariant} whileHover="hover">
+              <Link
+                className="p-2 bg-white text-primary rounded-md"
+                href="/projects"
+              >
+                See more
+              </Link>
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={heroVariant}
+            initial="hidden2"
+            whileInView="slider"
+            viewport={{ once: true }}
+            className="w-full md:w-1/2 h-auto md:h-[100px] bg-bkg p-8 flex flex-col md:flex-row gap-5 justify-between items-center rounded-sm"
+          >
+            <h2 className="text-3xl font-light text-white">My Skills?</h2>
+            <motion.p variants={heroVariant} whileHover="hover">
+              <TypeAnimation
+                sequence={[
+                  "Reactjs", // Types 'One'
+                  1000, // Waits 1s
+                  "Nextjs", // Deletes 'One' and types 'Two'
+                  1000, // Waits 2s
+                  "Tailwindcss", // Deletes 'One' and types 'Two'
+                  1000, // Waits 2s
+                  "Zustand", // Deletes 'One' and types 'Two'
+                  1000, // Waits 2s
+                  "Sanity.io", // Deletes 'One' and types 'Two'
+                  1000, // Waits 2s
+                  "Framer Motion", // Deletes 'One' and types 'Two'
+                  1000, // Waits 2s
+                  "Git", // Deletes 'One' and types 'Two'
+                  1000, // Waits 2s
+                  "Wordpress", // Deletes 'One' and types 'Two'
+                  1000, // Waits 2s
+                  // () => {
+                  //   console.log("Sequence completed");
+                  // },
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+                speed={15}
+                deletionSpeed={15}
+                className="italic font-bold text-[#F59E0B] text-xl md:text-3xl"
+              />
+            </motion.p>
+          </motion.div>
+        </div>
         <Socials />
       </div>
     </motion.div>
