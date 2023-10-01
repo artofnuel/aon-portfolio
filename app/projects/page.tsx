@@ -113,6 +113,7 @@ const Page = async () => {
                   <ul className="w-full flex gap-3 overflow-x-scroll scrollbar-hide">
                     {allProjects.components.map((tech, index) => (
                       <li
+                        key={index}
                         className={`${texts[currentIndex]} p-2 px-5 whitespace-nowrap flex justify-center items-center rounded-md bg-white text-md font-medium`}
                       >
                         {tech}
