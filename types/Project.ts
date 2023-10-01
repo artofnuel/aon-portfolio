@@ -7,6 +7,8 @@ export type Project = {
     slug: string;
     image: string;
     url: string;
+    github: string;
+    components: string[];
     content: PortableTextBlock[];
 
 }

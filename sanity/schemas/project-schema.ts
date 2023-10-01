@@ -13,19 +13,25 @@ const project = {
     {
       name: "image",
       title: "Image",
-      type: "array",
-      of: [
-        {
-          type: "image",
-          fields: [{ name: "alt", title: "Alt", type: "string" }],
-        },
-      ],
+      type: "image",
+      fields: [{ name: "alt", title: "Alt", type: "string" }],
       options: { hotspot: true },
     },
     {
       name: "url",
       title: "URL",
       type: "url",
+    },
+    {
+      name: "github",
+      title: "Github",
+      type: "url",
+    },
+    {
+      name: "components",
+      title: "Components",
+      type: "array",
+      of: [{ type: "string" }]
     },
     {
       name: "content",
