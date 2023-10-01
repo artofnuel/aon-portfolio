@@ -5,13 +5,13 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="w-full h-[90vh] lg:h-[85vh] flex flex-col lg:flex-row gap-5 overflow-hidden p-4">
       <div className="w-full lg:w-1/2 h-full bg-bkg text-white relative">
         <div className="w-full h-full p-8 flex flex-col justify-center text-2xl">
           <h1 className="text-3xl">
-            Hi There, I&apos;m
+            Hi There, I'm
             <br />
             <span className="text-4xl font-bold text-primary italic uppercase">
               Emmanuel Inua
@@ -54,4 +54,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
