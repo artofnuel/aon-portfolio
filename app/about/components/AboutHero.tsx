@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import image from "../asset/profile.jpg";
+import image from "../../asset/profile.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
