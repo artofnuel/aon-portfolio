@@ -11,11 +11,11 @@ const Page = () => {
       <div className="w-full lg:w-1/2 h-full bg-bkg text-white relative">
         <div className="w-full h-full p-8 flex flex-col justify-center text-2xl">
           <h1 className="text-3xl">
-            Hi There, I&rsquo;m
-            <br />
-            <span className="text-4xl font-bold text-primary italic uppercase">
+            Hi There,
+            <span className="px-2 text-4xl font-bold text-primary italic uppercase">
               Emmanuel Inua
             </span>
+            at your service!
           </h1>
           <p className="italic uppercase">
             <span className="text-4xl font-bold text-primary">
