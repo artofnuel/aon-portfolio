@@ -41,11 +41,11 @@ const ProjectHero = async () => {
     "bg-[#222222]",
   ];
   let texts = [
-    "text-[#80061f]",
-    "text-[#8848bf]",
-    "text-green-600",
-    "text-[#0405ff]",
-    "text-[#222222]",
+    "hover:text-[#80061f] text-[#80061f]",
+    "hover:text-[#8848bf] text-[#8848bf]",
+    "hover:text-green-600 text-green-600",
+    "hover:text-[#0405ff] text-[#0405ff]",
+    "hover:text-[#222222] text-[#222222]",
   ];
 
   const containerVariant = {
@@ -124,21 +124,27 @@ const ProjectHero = async () => {
                     <PortableText value={allProjects.content} />
                   </div>
                   <div className="flex gap-4 mt-4">
-                    <button
-                      className={`p-2 px-6 text-lg font-semibold rounded-md bg-white ${texts[currentIndex]}`}
+                    <a
+                      href={allProjects.github}
+                      target="_blank"
+                      no-referrer
+                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white ${texts[currentIndex]} transition-all duration-500`}
                     >
                       Codebase
-                    </button>
-                    <button
-                      className={`p-2 px-6 text-lg font-semibold rounded-md bg-white ${texts[currentIndex]}`}
+                    </a>
+                    <a
+                      href={allProjects.url}
+                      target="_blank"
+                      no-referrer
+                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white ${texts[currentIndex]} transition-all duration-500`}
                     >
                       Live View
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="w-full lg:w-1/2 flex  justify-center items-center">
                   <img
-                    src={allProjects?.image}
+                    src={allProjects.image}
                     alt=""
                     className="w-full aspect-auto rounded-md shadow-md"
                   />
