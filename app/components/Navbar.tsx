@@ -69,6 +69,11 @@ const Navbar = () => {
               Projects
             </Link>
           </li>
+          <li className="p-2 hover:text-2xl hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out">
+            <Link onClick={falseNav} href="/artofnuel">
+              ArtofNuel
+            </Link>
+          </li>
           <li className="p-2 px-5 bg-bkg font-medium text-white rounded-md hover:text-2xl hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out">
             <Link onClick={falseNav} href="/contact">
               Contact
@@ -123,6 +128,11 @@ const Navbar = () => {
                 <li className="p-2">
                   <Link onClick={falseNav} href="/projects">
                     Projects
+                  </Link>
+                </li>
+                <li className="p-2">
+                  <Link onClick={falseNav} href="/artofnuel">
+                    ArtofNuel
                   </Link>
                 </li>
                 <li className="p-2">

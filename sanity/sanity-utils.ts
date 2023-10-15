@@ -1,4 +1,4 @@
-import { Profile, Project } from "@/types/Project";
+import { Art, Profile, Project } from "@/types/Project";
 import { createClient, groq } from "next-sanity";
 
 export async function getProjects(): Promise<Project[]> {
@@ -38,6 +38,24 @@ export async function getProfiles(): Promise<Profile[]> {
       'slug': slug.current,
       'image': image.asset->url,
       content,
+    }`
+  );
+}
+
+export async function getArt(): Promise<Art[]> {
+  const client = createClient({
+    projectId: "80txq467",
+    dataset: "production",
+    apiVersion: "2023-09-10",
+  });
+
+  return client.fetch(
+    groq`*[_type == "art"]{
+      _id,
+      _createdAt,
+      name,
+      'slug': slug.current,
+      'image': image.asset->url,
     }`
   );
 }

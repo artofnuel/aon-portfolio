@@ -6,7 +6,7 @@ const HeroImg = async () => {
   const allProfiles = await getProfiles();
 
   return (
-    <div className="w-full h-[350px]">
+    <div className="w-full h-[400px]">
       {allProfiles.map((profile) => (
         <Image
           key={profile._id}

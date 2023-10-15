@@ -83,7 +83,7 @@ const ProjectHero = async () => {
     <div className={`w-full h-auto mx-auto p-4 md:p-8 md:px-12`}>
       <AnimatePresence>
         <motion.div
-          className={`${colors[currentIndex]} p-5 w-full h-auto py-10 md:h-[500px] rounded-md`}
+          className={`${colors[currentIndex]} p-5 w-full h-auto py-10 md:h-[80vh] rounded-md`}
           variants={containerVariant}
           initial="hidden"
           animate="visible"

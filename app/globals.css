@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+.masonry-item {
+    grid-column: span 2; /* Each item spans two columns */
+  }
+  
+  @media (min-width: 768px) {
+    .masonry-item {
+      grid-column: span 1; /* On larger screens, each item spans one column */
+    }
+  }
+  

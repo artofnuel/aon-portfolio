@@ -22,3 +22,11 @@ export type Profile = {
     url: string;
     content: PortableTextBlock[];
 }
+
+export type Art = {
+    _id: string;
+    _createdAt: Date;
+    name: string;
+    slug: string;
+    image: string;
+}
