@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 import HeroImg from "./HeroImg";
 import Typed from "./Typed";
 import { TypeAnimation } from "react-type-animation";
+import useMyStore from "../store/mystate";
 
 const Hero = () => {
+  const { falseNav } = useMyStore();
+
   const heroVariant = {
     hidden: {
       opacity: 0,
@@ -62,11 +65,14 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
       className="w-full h-full flex flex-col gap-5"
+      // onClick={falseNav}
     >
       <div className="flex flex-col md:flex-row gap-5">
         <motion.div className="w-full md:w-2/3 h-auto md:h-[400px] bg-bkg drop-shadow-lg rounded-sm p-4 md:p-8 flex justify-start items-center">
           <h1 className="text-white font-light text-lg md:text-4xl md:leading-[50px]">
-            <span className="">Hi There!!!</span>
+            <span className="">
+              Hi There! <br />I am a Frontend Web Developer.
+            </span>
             <br />
             I create aesthetic and functional
             <br />
