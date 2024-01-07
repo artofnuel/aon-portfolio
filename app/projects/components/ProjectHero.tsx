@@ -133,7 +133,7 @@ const ProjectHero = async () => {
                       href={allProjects.github}
                       target="_blank"
                       no-referrer
-                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white ${textIndex} transition-all duration-500`}
+                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white hover:text-[black] transition-all duration-500`}
                     >
                       Codebase
                     </a>
@@ -141,7 +141,7 @@ const ProjectHero = async () => {
                       href={allProjects.url}
                       target="_blank"
                       no-referrer
-                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white ${textIndex} transition-all duration-500`}
+                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white hover:text-[black] transition-all duration-500`}
                     >
                       Live View
                     </a>
