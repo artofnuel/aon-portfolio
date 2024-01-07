@@ -13,7 +13,8 @@ const ProjectHero = async () => {
 
   const allProjects = projects[currentIndex];
 
-  const nextSlide = () => {
+  const nextSlide = (e) => {
+    e.preventDefault();
     if (currentIndex === totalSlides - 1) {
       reset();
     } else {
@@ -23,7 +24,8 @@ const ProjectHero = async () => {
     }
   };
 
-  const prevSlide = () => {
+  const prevSlide = (e) => {
+    e.preventDefault();
     if (currentIndex === 0) {
       useCarouselStore.setState({ currentIndex: totalSlides - 1 });
     } else {
@@ -79,11 +81,14 @@ const ProjectHero = async () => {
     },
   };
 
+  const colorIndex = currentIndex % colors.length;
+  const textIndex = currentIndex % texts.length;
+
   return (
     <div className={`w-full h-auto mx-auto p-4 md:p-8 md:px-12`}>
       <AnimatePresence>
         <motion.div
-          className={`${colors[currentIndex]} p-5 w-full h-auto py-10 md:h-[80vh] rounded-md`}
+          className={`${colors[colorIndex]} p-5 w-full h-auto py-10 md:h-[80vh] rounded-md`}
           variants={containerVariant}
           initial="hidden"
           animate="visible"
@@ -93,14 +98,14 @@ const ProjectHero = async () => {
             <div className="w-full flex flex-col gap-10">
               <div className="space-x-4">
                 <button
-                  onClick={nextSlide}
-                  className={`bg-bkg ${texts[currentIndex]} text-2xl p-3 rounded-md`}
+                  onClick={(e) => nextSlide(e)}
+                  className={`bg-bkg ${texts[textIndex]} text-2xl p-3 rounded-md`}
                 >
                   <BiUpArrow />
                 </button>
                 <button
-                  onClick={prevSlide}
-                  className={`bg-white ${texts[currentIndex]} text-2xl p-3 rounded-md`}
+                  onClick={(e) => prevSlide(e)}
+                  className={`bg-white ${texts[textIndex]} text-2xl p-3 rounded-md`}
                 >
                   <BiDownArrow />
                 </button>
@@ -114,7 +119,7 @@ const ProjectHero = async () => {
                     {allProjects.components.map((tech, index) => (
                       <li
                         key={index}
-                        className={`${texts[currentIndex]} p-2 px-5 whitespace-nowrap flex justify-center items-center rounded-md bg-white text-md font-medium`}
+                        className={`${textIndex} p-2 px-5 whitespace-nowrap flex justify-center items-center rounded-md bg-white text-md font-medium`}
                       >
                         {tech}
                       </li>
@@ -128,7 +133,7 @@ const ProjectHero = async () => {
                       href={allProjects.github}
                       target="_blank"
                       no-referrer
-                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white ${texts[currentIndex]} transition-all duration-500`}
+                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white ${textIndex} transition-all duration-500`}
                     >
                       Codebase
                     </a>
@@ -136,7 +141,7 @@ const ProjectHero = async () => {
                       href={allProjects.url}
                       target="_blank"
                       no-referrer
-                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white ${texts[currentIndex]} transition-all duration-500`}
+                      className={`p-2 px-6 text-lg font-semibold rounded-md border-2 border-white text-white hover:bg-white ${textIndex} transition-all duration-500`}
                     >
                       Live View
                     </a>
@@ -145,7 +150,7 @@ const ProjectHero = async () => {
                 <div className="w-full lg:w-1/2 flex  justify-center items-center">
                   <img
                     src={allProjects.image}
-                    alt=""
+                    alt={allProjects.name}
                     className="w-full aspect-auto rounded-md shadow-md"
                   />
                 </div>
